@@ -4,10 +4,12 @@ from datetime import datetime
 from todo.models import Task
 
 # Create your tests here.
+
 class SampleTestCase(TestCase):
     def test_sample(self):
         self.assertEqual(1 + 2, 3)
     
+
 
 class TaskModelTestCase(TestCase):
     def test_create_task1(self):
@@ -51,6 +53,7 @@ class TaskModelTestCase(TestCase):
 
     def test_is_overdue_none(self):
         current = timezone.make_aware(datetime(2024, 7, 10, 0, 0, 0))
+
         task = Task(title='task3')
         task.save()
         
